@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Me — Dillon Ofili</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Profile</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <article class="contact-card" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Contact Me</h1>
+
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" data-testid="test-contact-name" aria-describedby="error-name" required />
+          <span id="error-name" role="alert" class="error" data-testid="test-contact-error-name" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" data-testid="test-contact-email" aria-describedby="error-email" required />
+          <span id="error-email" role="alert" class="error" data-testid="test-contact-error-email" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" data-testid="test-contact-subject" aria-describedby="error-subject" required />
+          <span id="error-subject" role="alert" class="error" data-testid="test-contact-error-subject" aria-live="polite"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+          <span id="error-message" role="alert" class="error" data-testid="test-contact-error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" data-testid="test-contact-submit" class="btn">Send Message</button>
+        </div>
+
+        <div id="form-success" class="success" role="status" aria-live="polite" data-testid="test-contact-success" hidden>Message sent successfully. Thank you.</div>
+      </form>
+    </article>
+  </main>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
