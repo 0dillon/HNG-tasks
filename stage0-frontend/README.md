@@ -1,29 +1,44 @@
-# HNG Stage 0 — Profile Card (Frontend)
+# Stage 1: Multi-Page Application Expansion
 
-A simple accessible, responsive profile card built with semantic HTML, CSS, and vanilla JS.
+This project builds on Stage 0 by integrating two new, fully responsive and accessible pages: **Contact Us** and **About Me**.
 
-## Live
-(Deploy to Netlify and paste your live URL here)
+## 1. Contact Us Page (Form Validation)
 
-## Files
-- index.html
-- styles.css
-- script.js
+Implement a contact form with mandatory client-side validation.
 
-## How to run locally
-1. Open `index.html` in a browser (no server required).
-2. The timestamp is displayed in milliseconds. Click "Refresh time" to update.
-3. Paste an avatar URL and press Apply, or upload an image and press Upload.
+### Required data-testid Attributes & Validation Rules
 
-## Notes
-- Required data-testids included:
-  - test-profile-card
-  - test-user-name
-  - test-user-bio
-  - test-user-time
-  - test-user-avatar
-  - test-user-social-links (and individual social data-testids)
-  - test-user-hobbies
-  - test-user-dislikes
-- Social links open in new tabs with `rel="noopener noreferrer"`.
-- Keyboard focus styles visible; controls are keyboard accessible.
+| Element | Validation | `data-testid` | 
+| ----- | ----- | ----- | 
+| Full Name | Required | `test-contact-name` | 
+| Email | Required, Valid Email Format | `test-contact-email` | 
+| Subject | Required | `test-contact-subject` | 
+| Message | Required, Min. 10 Chars | `test-contact-message` | 
+| Submit Button | \- | `test-contact-submit` | 
+| Error Message | (Per field) | `test-contact-error-<field>` | 
+| Success Message | On valid submission | `test-contact-success` | 
+
+### Accessibility
+
+* Inputs must use `<label>`s (via `for` attribute).
+* Error messages must be linked using `aria-describedby`.
+
+## 2. About Me Page (Reflective Content)
+
+A semantic page for personal reflections.
+
+### Structural data-testid & Semantic Elements
+
+| Content Section | Semantic Element | `data-testid` | 
+| ----- | ----- | ----- | 
+| Page Container | `<main>` | `test-about-page` | 
+| Bio | `<section>` | `test-about-bio` | 
+| Goals | `<section>` | `test-about-goals` | 
+| Low Confidence Areas | `<section>` | `test-about-confidence` | 
+| Note to Future Self | `<section>` | `test-about-future-note` | 
+| Extra Thoughts | `<section>` | `test-about-extra` | 
+
+### Criteria Focus
+
+* Use correct HTML structure (`<main>`, `<section>`, `<h2>`/`<h3>`).
+* Maintain full responsiveness and keyboard navigation.
