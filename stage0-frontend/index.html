@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dillon Ofili — Profile Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <article class="profile-card" data-testid="test-profile-card" aria-labelledby="user-name">
+      <header class="profile-header">
+        <figure class="avatar-figure">
+          <img
+            id="avatar"
+            src="https://api.dicebear.com/6.x/adventurer/png?seed=dillon_ofili"
+            alt="Dillon Ofili avatar"
+            data-testid="test-user-avatar"
+          />
+          <figcaption class="visually-hidden">Avatar of Dillon Ofili</figcaption>
+        </figure>
+
+        <div class="name-and-time">
+          <h2 id="user-name" class="user-name" data-testid="test-user-name">Dillon Ofili</h2>
+          <p class="user-bio" data-testid="test-user-bio">
+            Aspiring software engineer | Learning to build amazing things through code.
+          </p>
+          <p class="user-time" data-testid="test-user-time" aria-live="polite"></p>
+        </div>
+      </header>
+
+      <nav aria-label="Social links" class="social" data-testid="test-user-social-links">
+        <ul>
+          <li><a href="https://github.com/0dillon" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+          <li><a href="https://x.com/IkoroduBatman" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">X</a></li>
+          <li><a href="https://linkedin.com/in/dillon-ofili" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <section class="lists">
+        <section class="hobbies" aria-labelledby="hobbies-heading">
+          <h3 id="hobbies-heading">Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Coding</li>
+            <li>Anime</li>
+            <li>Reading</li>
+          </ul>
+        </section>
+
+        <section class="dislikes" aria-labelledby="dislikes-heading">
+          <h3 id="dislikes-heading">Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Slow WiFi</li>
+            <li>Delays</li>
+            <li>Messy code</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="controls" aria-label="Profile controls">
+        <label for="avatar-url" class="visually-hidden">Avatar image URL</label>
+        <input id="avatar-url" type="url" placeholder="Paste avatar image URL and press Apply" aria-label="Avatar URL" />
+        <button id="apply-avatar">Apply</button>
+
+        <label for="avatar-file" class="visually-hidden">Upload avatar</label>
+        <input id="avatar-file" type="file" accept="image/*" />
+        <button id="apply-upload">Upload</button>
+
+        <button id="refresh-time">Refresh time</button>
+      </section>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
